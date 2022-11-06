@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <h1 align = "center" style="color:blue;">Hama/perler Object detector</h1>
+
+   <form align = "center" class="inline">
+       <button type="button" onclick="toggle_visibility('camera')" >Live stream</button>
+       <button type="button" onclick="toggle_visibility('video')" >Video</button>
+   </form>
+   <div>
+
+   </div>
+   <div style="text-align:center; padding: 30px;" >
+       <img align = "center" id="camera" style="visibility: hidden" src="{{ url_for('camera') }}" width="25%"/>
+       <img align = "center" id="video" style="visibility: hidden" src="{{ url_for('video') }}" width="25%"/>
+   </div>
+
+   <script>
+        function toggle_visibility(id) {
+           var e = document.getElementById(id);
+           if(e.style.visibility == 'visible')
+              e.style.visibility= 'hidden';
+           else
+              e.style.visibility= 'visible';
+        }
+   </script>
+
+</body>
+
+</html>
